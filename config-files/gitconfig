@@ -1,0 +1,7 @@
+[user]
+	name = Alex Braga
+	email = contato@alexbraga.com.br
+[core]
+	editor = code
+[init]
+	defaultBranch = master
