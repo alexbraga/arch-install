@@ -8,8 +8,12 @@ ln -sf /usr/share/zoneinfo/Brazil/East /etc/localtime
 hwclock --systohc
 
 # LOCALIZATION
-# Select locale manually - uncomment needed locale(s), save file and exit
-nano /etc/locale.gen
+
+# Select locale automatically: find needed locale(s), uncomment, save and exit
+locale="en_US.UTF-8 UTF-8"
+echo "Editing configuration file for locale-gen..."
+sed -i "s/#$locale/$locale/g" /etc/locale.gen
+
 echo "Generating locales..."
 locale-gen
 echo "Creating locale.conf..."
@@ -27,3 +31,5 @@ echo
 passwd
 
 echo -e "\n...DONE\n"
+
+/arch-install/02-microcode.sh
