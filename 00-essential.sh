@@ -1,16 +1,19 @@
 #!/bin/bash
 
-# ARCH LINUX ESSENTIAL PACKAGES + EXTRAS
+# ARCH LINUX BASE SYSTEM
 
 PKGS=(
-    'base-devel'
+    # ESSENTIAL PACKAGES
     'base'
+    'base-devel'
+    'linux'
+    'linux-firmware'
+
+    # EXTRAS
     'dialog'
     # 'efibootmgr'    # needed for UEFI systems only
     'git'
     'grub'
-    'linux-firmware'
-    'linux'
     'man-db'
     'man-pages'
     'nano'
@@ -40,8 +43,13 @@ echo -e "\n...DONE\n"
 echo "Generating the fstab file..."
 genfstab -U /mnt >> /mnt/etc/fstab
 
-# Copy git repo to new system, change root and run configuration script
-cp -rp /root/arch-install/ /mnt/
+# Copy git repo to new system
+cp -r /root/arch-install/ /mnt/
+
+# Change permissions
+chmod -R 777 /mnt/arch-install/
+
+# Change root and run configuration script
 echo "Changing root into the new system..."
 arch-chroot /mnt /bin/bash /arch-install/01-config.sh
 exit
