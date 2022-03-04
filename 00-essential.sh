@@ -35,3 +35,13 @@ else
 fi
 
 echo -e "\n...DONE\n"
+
+# Generate fstab
+echo "Generating the fstab file..."
+genfstab -U /mnt >> /mnt/etc/fstab
+
+# Copy git repo to new system, change root and run configuration script
+cp -rp /root/arch-install/ /mnt/
+echo "Changing root into the new system..."
+arch-chroot /mnt/arch-install/01-config.sh
+exit

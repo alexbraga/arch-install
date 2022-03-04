@@ -208,7 +208,6 @@ _________________________________________________\n"
             export cpu
             install
             ./00-essential.sh
-            ./01-config.sh
             ./02-microcode.sh
             success
             echo -e "Configure the bootloader, create an unprivileged user account and reboot the system\n"
