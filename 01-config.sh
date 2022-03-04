@@ -10,28 +10,30 @@ genfstab -U /mnt >> /mnt/etc/fstab
 echo "Changing root into the new system..."
 arch-chroot /mnt
 
+chrt='arch-chroot /mnt /bin/bash'
+
 # SET TIME ZONE
-echo "Setting system time zone..."
-ln -sf /usr/share/zoneinfo/Brazil/East /etc/localtime
-hwclock --systohc
+chrt echo "Setting system time zone..."
+chrt ln -sf /usr/share/zoneinfo/Brazil/East /etc/localtime
+chrt hwclock --systohc
 
 # LOCALIZATION
 # Select locale manually - uncomment needed locale(s), save file and exit
-nano /etc/locale.gen
-echo "Generating locales..."
-locale-gen
-echo "Creating locale.conf..."
-echo LANG=en_US.UTF-8 > /etc/locale.conf
+chrt nano /etc/locale.gen
+chrt echo "Generating locales..."
+chrt locale-gen
+chrt echo "Creating locale.conf..."
+chrt echo LANG=en_US.UTF-8 > /etc/locale.conf
 
 # NETWORK
-echo "Creating hostname..."
-echo arch-desktop > /etc/hostname
-echo "Enabling NetworkManager.service..."
-systemctl enable NetworkManager
-echo
+chrt echo "Creating hostname..."
+chrt echo arch-desktop > /etc/hostname
+chrt echo "Enabling NetworkManager.service..."
+chrt systemctl enable NetworkManager
+chrt echo
 
 # ROOT PASSWORD
 # Enter (new) password for root user
-passwd
+chrt passwd
 
-echo -e "\n...DONE\n"
+chrt echo -e "\n...DONE\n"

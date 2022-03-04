@@ -223,7 +223,7 @@ _________________________________________________\n"
             ./03-gpu.sh
             ./04-gui.sh
             ./05-packages.sh
-            ./06-aur.sh
+            sudo -u alex ./06-aur.sh
             success
             break
             ;;
@@ -242,7 +242,7 @@ _________________________________________________\n"
             install_type="Packages"
             install
             ./05-packages.sh
-            ./06-aur.sh
+            sudo -u alex ./06-aur.sh
             success
             break
             ;;
