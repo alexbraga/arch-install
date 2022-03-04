@@ -208,9 +208,8 @@ _________________________________________________\n"
             export cpu
             install
             ./00-essential.sh
-            ./02-microcode.sh
             success
-            echo -e "Configure the bootloader, create an unprivileged user account and reboot the system\n"
+            echo -e "'chroot' to new system, configure the bootloader, create an unprivileged user account and reboot\n"
             break
             ;;
         "Install DE + Packages")
