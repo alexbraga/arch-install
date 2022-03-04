@@ -10,14 +10,14 @@ else
     echo "INSTALLING: Yay"
     git clone https://aur.archlinux.org/yay.git
     cd yay
-    sudo makepkg -si
+    makepkg -si
     echo -e "\n...DONE\n"
 
     # Configure for first run
     echo "Configuring Yay for first run..."
-    sudo yay -Y --gendb
-    sudo yay -Syu --devel
-    sudo yay -Y --devel --save
+    yay -Y --gendb
+    yay -Syu --devel
+    yay -Y --devel --save
     echo -e "\n...DONE"
 fi
 
@@ -54,7 +54,7 @@ PKGS=(
 
 for PKG in "${PKGS[@]}"; do
     echo "INSTALLING: ${PKG}"
-    sudo yay -S "$PKG" --noconfirm --needed
+    yay -S "$PKG" --needed
 done
 
 echo -e "\n...DONE\n"

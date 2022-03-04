@@ -6,7 +6,7 @@ PKGS=(
     'intellij-idea-community-edition'
     'jdk-openjdk'
     'maven'
-    'node-lts-gallium'  # Replace LTS release name if outdated
+    'nodejs-lts-gallium'  # Replace LTS release name if outdated
     'npm'
     # 'nvm'
 
