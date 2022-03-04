@@ -48,7 +48,7 @@ PKGS=(
     # 'windscribe-cli'
 
     # UTILITIES
-    'freefilesync-bin'
+    # 'freefilesync-bin'
     # 'vorta'
 )
 
