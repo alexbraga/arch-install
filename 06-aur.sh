@@ -48,7 +48,6 @@ PKGS=(
     # 'windscribe-cli'
 
     # UTILITIES
-    # 'freefilesync-bin'
     # 'vorta'
 )
 
@@ -56,6 +55,12 @@ for PKG in "${PKGS[@]}"; do
     echo -e "\nINSTALLING: ${PKG}"
     yay -S "$PKG" --needed
 done
+
+# Install FreeFileSync
+echo -e "\nINSTALLING: freefilesync-bin"
+git clone https://aur.archlinux.org/freefilesync-bin.git
+cd freefilesync-bin
+makepkg -sic
 
 echo -e "\n...DONE\n"
 
