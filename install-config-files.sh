@@ -12,7 +12,8 @@ wget -q https://raw.githubusercontent.com/marcopaganini/gnome-cedilla-fix/master
 chmod 755 fix-cedilla
 ./fix-cedilla
 
-# BASHRC AND GITCONFIG
+# Fix Java font rendering
+echo -e "\nexport _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true'" >> $HOME/.bash_profile
 
 # Copy bashrc and gitconfig to current user
 cp config-files/bashrc $HOME/.bashrc
