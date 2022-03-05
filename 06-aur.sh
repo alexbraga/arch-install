@@ -60,7 +60,7 @@ done
 echo -e "\n...DONE\n"
 
 # Enabling services
-echo "Enabling mongod.service..."
-sudo systemctl enable mongod
+echo "Enabling mongodb.service..."
+sudo systemctl enable mongodb
 
 echo -e "\n...DONE\n"
