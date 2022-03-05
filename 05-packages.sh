@@ -60,8 +60,8 @@ PKGS=(
 )
 
 for PKG in "${PKGS[@]}"; do
-    echo "INSTALLING: ${PKG}"
-    sudo pacman -S "$PKG" --noconfirm --needed
+    echo -e "\nINSTALLING: ${PKG}"
+    sudo pacman -S "$PKG" --needed
 done
 
 echo -e "\n...DONE\n"
