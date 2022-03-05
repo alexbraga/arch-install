@@ -161,7 +161,7 @@ install() {
 
     if [[ ! $install_type = "Arch Linux" ]]; then
         echo "Checking for updates..."
-        pacman -Syu
+        sudo pacman -Syu
         echo -e "\n...DONE\n"
     fi
 }
@@ -170,6 +170,14 @@ install() {
 
 success() {
     echo -e "\nINSTALLATION SUCCESSFULLY FINISHED\n"
+
+    if [[ $install_type = "Arch Linux" ]]; then
+        echo "1) 'chroot' to new system"
+        echo "2) Configure the bootloader"
+        echo "3) Create an unprivileged user account"
+        echo "4) Edit sudoers file"
+        echo -e "5) Reboot\n"
+    fi
 }
 
 # MAIN MENU
@@ -209,7 +217,6 @@ _________________________________________________\n"
             install
             ./00-essential.sh
             success
-            echo -e "'chroot' to new system, configure the bootloader, create an unprivileged user account and reboot\n"
             break
             ;;
         "Install DE + Packages")

@@ -53,7 +53,7 @@ PKGS=(
 )
 
 for PKG in "${PKGS[@]}"; do
-    echo "INSTALLING: ${PKG}"
+    echo -e "\nINSTALLING: ${PKG}"
     yay -S "$PKG" --needed
 done
 

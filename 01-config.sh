@@ -14,7 +14,7 @@ locale="en_US.UTF-8 UTF-8"
 echo "Editing configuration file for locale-gen..."
 sed -i "s/#$locale/$locale/g" /etc/locale.gen
 
-echo "Generating locales..."
+# Generate locales
 locale-gen
 echo "Creating locale.conf..."
 echo LANG=en_US.UTF-8 > /etc/locale.conf
