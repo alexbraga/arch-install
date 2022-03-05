@@ -64,4 +64,8 @@ for PKG in "${PKGS[@]}"; do
     sudo pacman -S "$PKG" --needed
 done
 
+# Enable firewall
+echo "Enabling ufw.service..."
+sudo systemctl enable ufw
+
 echo -e "\n...DONE\n"
