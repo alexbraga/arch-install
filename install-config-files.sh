@@ -20,7 +20,7 @@ cp config-files/gitconfig $HOME/.gitconfig
 
 # Copy bashrc to root user
 su
-cp /home/alex/arch-install/config-files/root/bashrc $HOME/.bashrc
+cp /arch-install/config-files/root/bashrc $HOME/.bashrc
 exit
 
 echo -e "\n...DONE\n"
