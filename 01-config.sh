@@ -10,9 +10,11 @@ hwclock --systohc
 # LOCALIZATION
 
 # Select locale automatically: find needed locale(s), uncomment, save and exit
-locale="en_US.UTF-8 UTF-8"
+locale01="en_US.UTF-8 UTF-8"
+locale02="pt_BR.UTF-8 UTF-8"
 echo "Editing configuration file for locale-gen..."
-sed -i "s/#$locale/$locale/g" /etc/locale.gen
+sed -i "s/#$locale01/$locale01/g" /etc/locale.gen
+sed -i "s/#$locale02/$locale02/g" /etc/locale.gen
 
 # Generate locales
 locale-gen
