@@ -26,8 +26,8 @@ echo -e "\nPreparing to install AUR packages...\n"
 PKGS=(
     # DEVELOPMENT
     'heroku-cli-bin'
-    # 'mongodb-bin'
-    'mongodb44-bin' # Use this if Mongo 5.x doesn't work on your system
+    'mongodb-bin' # Use this if your system supports Mongo's latest version
+    # 'mongodb44-bin' # Use this if Mongo >5.x doesn't work on your system
     'postman-bin'
     'robo3t-bin'
     'visual-studio-code-bin'
@@ -54,6 +54,7 @@ PKGS=(
 for PKG in "${PKGS[@]}"; do
     echo -e "\nINSTALLING: ${PKG}"
     yay -S "$PKG" --needed
+    echo -e "\n...DONE"
 done
 
 # Install FreeFileSync
@@ -61,11 +62,9 @@ echo -e "\nINSTALLING: freefilesync-bin"
 git clone https://aur.archlinux.org/freefilesync-bin.git
 cd freefilesync-bin
 makepkg -sic
-
-echo -e "\n...DONE\n"
+echo -e "\n...DONE"
 
 # Enabling services
-echo "Enabling mongodb.service..."
+echo -e "\nEnabling mongodb.service..."
 sudo systemctl enable mongodb
-
 echo -e "\n...DONE\n"
