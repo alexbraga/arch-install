@@ -4,7 +4,7 @@ PKGS=(
     # DEVELOPMENT
     'gradle'
     'intellij-idea-community-edition'
-    'jdk-openjdk'
+    'jdk17-openjdk'
     'maven'
     'nodejs-lts-gallium'  # Replace LTS release name if outdated
     'npm'
@@ -26,19 +26,19 @@ PKGS=(
     'alsa-utils'
     # 'audacious'
     # 'elisa'
-    'mplayer'
+    'mpv'
     # 'ncmpcpp'
     'pavucontrol'
     'pulseaudio-alsa'
-    'smplayer-skins'
-    'smplayer-themes'
-    'smplayer'
+    # 'smplayer-skins'
+    # 'smplayer-themes'
+    # 'smplayer'
 
     # MISCELLANEOUS
     'calibre'
 
     # NETWORK
-    'apache'
+    # 'apache'
     'ufw'   # Replace with 'gufw' for GUI tool
 
     # SYSTEM
@@ -61,11 +61,12 @@ PKGS=(
 
 for PKG in "${PKGS[@]}"; do
     echo -e "\nINSTALLING: ${PKG}"
-    sudo pacman -S "$PKG" --needed
+    sudo pacman -S "$PKG" --needed --noconfirm
+    echo -e "\n...DONE"
 done
 
 # Enable firewall
-echo "Enabling ufw.service..."
+echo -e "\nEnabling ufw.service..."
 sudo systemctl enable ufw
 
 echo -e "\n...DONE\n"
