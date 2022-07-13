@@ -5,10 +5,12 @@ PKGS=(
     'gradle'
     'intellij-idea-community-edition'
     'jdk17-openjdk'
+    'mariadb'
     'maven'
     'nodejs-lts-gallium'  # Replace LTS release name if outdated
     'npm'
     # 'nvm'
+    'postgresql'
 
     # GRAPHICS
     'gwenview'
