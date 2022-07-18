@@ -36,6 +36,7 @@ PKGS=(
     # 'smplayer-skins'
     # 'smplayer-themes'
     # 'smplayer'
+    'yt-dlp'
 
     # MISCELLANEOUS
     'calibre'
