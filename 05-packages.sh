@@ -46,6 +46,7 @@ PKGS=(
     'ufw'   # Replace with 'gufw' for GUI tool
 
     # SYSTEM
+    'gnome-keyring'
     'gparted'
     'kcron'
     'ksystemlog'
