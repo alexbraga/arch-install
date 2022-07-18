@@ -33,10 +33,12 @@ PKGS=(
     'visual-studio-code-bin'
 
     # INTERNET
-    'google-chrome'
     'dropbox'
+    'google-chrome'
+    'jackett-bin'
 
     # MISCELLANEOUS
+    'anki-bin'
     # 'mendeleydesktop-bundled'
 
     # MEDIA

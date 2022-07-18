@@ -17,6 +17,7 @@ PKGS=(
     'man-db'
     'man-pages'
     'nano'
+    'net-tools'
     'networkmanager'
     'ntfs-3g'
     'os-prober'       # needed for dual boot only

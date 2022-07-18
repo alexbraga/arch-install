@@ -2,6 +2,7 @@
 
 PKGS=(
     # DEVELOPMENT
+    'dbeaver'
     'gradle'
     'intellij-idea-community-edition'
     'jdk17-openjdk'
