@@ -62,3 +62,9 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Disable XON/XOFF
+stty -ixon
+
+export EDITOR=/usr/bin/nano
+export PATH=$PATH:~/.local/bin
