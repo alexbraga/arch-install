@@ -9,6 +9,7 @@ PKGS=(
     'noto-fonts-emoji'
     'packagekit-qt5'
     'plasma'
+    'xdg-desktop-portal'
 )
 
 for PKG in "${PKGS[@]}"; do
