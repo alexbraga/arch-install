@@ -74,4 +74,8 @@ done
 echo -e "\nEnabling ufw.service..."
 sudo systemctl enable ufw
 
+# Enable Cron
+echo -e "\nEnabling cronie.service..."
+sudo systemctl enable cronie.service
+
 echo -e "\n...DONE\n"
