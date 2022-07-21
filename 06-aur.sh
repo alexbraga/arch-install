@@ -68,17 +68,17 @@ cd freefilesync-bin
 makepkg -sic
 echo -e "\n...DONE"
 
-# Enabling MongoDB
+# Enable MongoDB
 echo -e "\nEnabling mongodb.service..."
 sudo systemctl enable mongodb.service
 echo -e "\n...DONE\n"
 
-# Enabling Prowlarr
+# Enable Prowlarr
 echo -e "\nEnabling prowlarr.service..."
 sudo systemctl enable prowlarr.service
 echo -e "\n...DONE\n"
 
-# Enabling Sonarr
+# Enable Sonarr
 echo -e "\nEnabling sonarr.service..."
 sudo systemctl enable sonarr.service
 echo -e "\n...DONE\n"
