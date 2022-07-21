@@ -36,6 +36,8 @@ PKGS=(
     'dropbox'
     'google-chrome'
     'jackett-bin'
+    'prowlarr'
+    'sonarr'
 
     # MISCELLANEOUS
     'anki-bin'
@@ -66,7 +68,17 @@ cd freefilesync-bin
 makepkg -sic
 echo -e "\n...DONE"
 
-# Enabling services
+# Enabling MongoDB
 echo -e "\nEnabling mongodb.service..."
-sudo systemctl enable mongodb
+sudo systemctl enable mongodb.service
+echo -e "\n...DONE\n"
+
+# Enabling Prowlarr
+echo -e "\nEnabling prowlarr.service..."
+sudo systemctl enable prowlarr.service
+echo -e "\n...DONE\n"
+
+# Enabling Sonarr
+echo -e "\nEnabling sonarr.service..."
+sudo systemctl enable sonarr.service
 echo -e "\n...DONE\n"
