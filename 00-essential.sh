@@ -16,6 +16,7 @@ PKGS=(
     'grub'
     'man-db'
     'man-pages'
+    'mlocate'
     'nano'
     'net-tools'
     'networkmanager'
