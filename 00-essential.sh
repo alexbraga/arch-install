@@ -10,10 +10,12 @@ PKGS=(
     'linux-firmware'
 
     # EXTRAS
+    # 'dhcpcd'
     'dialog'
     # 'efibootmgr'    # needed for UEFI systems only
     'git'
     'grub'
+    'iwd'
     'man-db'
     'man-pages'
     'mlocate'

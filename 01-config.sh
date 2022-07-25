@@ -24,9 +24,16 @@ echo LANG=en_US.UTF-8 > /etc/locale.conf
 # NETWORK
 echo "Creating hostname..."
 echo arch-desktop > /etc/hostname
+
+# Enable NetworkManager
 echo "Enabling NetworkManager.service..."
 systemctl enable NetworkManager
 echo
+
+# Enable dhcpcd
+# echo "Enabling dhcpcd.service..."
+# systemctl enable dhcpcd.service
+# echo
 
 # ROOT PASSWORD
 # Enter (new) password for root user
