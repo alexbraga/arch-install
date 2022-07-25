@@ -62,7 +62,6 @@ PKGS=(
     'kdialog'
     'neofetch'
     'veracrypt'
-    'wget'
 )
 
 for PKG in "${PKGS[@]}"; do

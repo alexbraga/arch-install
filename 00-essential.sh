@@ -26,6 +26,7 @@ PKGS=(
     'os-prober'       # needed for dual boot only
     'pacman-contrib'
     'vim'
+    'wget'
 )
 
 for PKG in "${PKGS[@]}"; do
