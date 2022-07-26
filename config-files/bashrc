@@ -63,7 +63,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Disable XON/XOFF
+# Disable XON/XOFF to allow forward history search (ctrl+s)
 stty -ixon
 
 export EDITOR=/usr/bin/nano

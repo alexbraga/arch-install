@@ -62,3 +62,9 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Disable XON/XOFF to allow forward history search (ctrl+s)
+stty -ixon
+
+export EDITOR=/usr/bin/nano
+export PATH=$PATH:~/.local/bin
