@@ -57,4 +57,5 @@ chmod -R 777 /mnt/arch-install/
 # Change root and run configuration script
 echo "Changing root into the new system..."
 arch-chroot /mnt /bin/bash /arch-install/01-config.sh
+echo "Exiting chroot..."
 exit
