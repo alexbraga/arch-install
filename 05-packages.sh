@@ -83,6 +83,8 @@ echo -e "\n...DONE\n"
 # Enable Docker
 echo -e "\nEnabling docker.service..."
 sudo systemctl enable docker.service
+echo -e "\nStarting docker.service..."
+sudo systemctl start docker.service
 echo -e "\n...DONE\n"
 
 # Install Portainer
