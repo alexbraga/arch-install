@@ -53,6 +53,9 @@ PKGS=(
 
     # UTILITIES
     'ark'
+    'aspell'
+    'aspell-en'
+    'aspell-pt'
     'bash-completion'
     # 'borg'
     'docker'
