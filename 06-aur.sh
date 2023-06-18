@@ -25,22 +25,26 @@ echo -e "\nPreparing to install AUR packages...\n"
 
 PKGS=(
     # DEVELOPMENT
-    'heroku-cli-bin'
     'mongodb-bin' # Use this if your system supports Mongo's latest version
     # 'mongodb44-bin' # Use this if Mongo >5.x doesn't work on your system
+    'mssql-server'
+    'msodbcsql'
+    'mssql-tools'
     'postman-bin'
     'robo3t-bin'
     'visual-studio-code-bin'
 
     # INTERNET
     'dropbox'
+    'flaresolverr'
     'google-chrome'
-    'jackett-bin'
+    # 'jackett-bin'
     'prowlarr'
     'sonarr'
 
     # MISCELLANEOUS
     'anki-bin'
+    'logseq-desktop-bin'
     # 'mendeleydesktop-bundled'
 
     # MEDIA
@@ -49,9 +53,11 @@ PKGS=(
 
     # NETWORK
     'protonvpn'
+    'tor-browser'
     # 'windscribe-cli'
 
     # UTILITIES
+    'etcher-bin'
     # 'vorta'
 )
 

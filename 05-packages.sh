@@ -29,8 +29,11 @@ PKGS=(
     'alsa-utils'
     # 'audacious'
     # 'elisa'
+    # 'kdenlive'
+    # 'kodi'
     'mpv'
     # 'ncmpcpp'
+    # 'obs-studio'
     'pavucontrol'
     'pulseaudio-alsa'
     # 'smplayer-skins'
@@ -40,6 +43,7 @@ PKGS=(
 
     # MISCELLANEOUS
     'calibre'
+    'libreoffice-still'
 
     # NETWORK
     # 'apache'
@@ -52,6 +56,7 @@ PKGS=(
     'ksystemlog'
 
     # UTILITIES
+    # 'android-tools'
     'ark'
     'aspell'
     'aspell-en'
@@ -60,10 +65,14 @@ PKGS=(
     # 'borg'
     'docker'
     'filelight'
+    # 'filezilla'
     'kate'
     'kcalc'
     'kdialog'
     'neofetch'
+    'p7zip'
+    'unzip'
+    'usbutils'
     'veracrypt'
 )
 

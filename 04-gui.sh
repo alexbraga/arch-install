@@ -6,6 +6,7 @@ PKGS=(
     'dolphin'
     'kdegraphics-thumbnailers'
     'konsole'
+    'noto-fonts-cjk'
     'noto-fonts-emoji'
     'packagekit-qt5'
     'plasma'
