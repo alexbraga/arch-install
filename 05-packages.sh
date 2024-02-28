@@ -4,7 +4,7 @@ PKGS=(
     # DEVELOPMENT
     'dbeaver'
     'gradle'
-    'intellij-idea-community-edition'
+    'jdk11-openjdk'
     'jdk17-openjdk'
     'mariadb'
     'maven'
@@ -15,7 +15,10 @@ PKGS=(
 
     # GRAPHICS
     'gwenview'
+    'inkscape'
+    'kimageformats'   # Image format plugins for Qt5
     'okular'
+    'qt5-imageformats'    # Plugins for additional image formats: TIFF, MNG, TGA, WBMP
     'spectacle'
 
     # INTERNET
@@ -31,22 +34,30 @@ PKGS=(
     # 'elisa'
     # 'kdenlive'
     # 'kodi'
+    # 'mpd'
     'mpv'
     # 'ncmpcpp'
     # 'obs-studio'
     'pavucontrol'
+    'pipewire-pulse'
     'pulseaudio-alsa'
+    # 'smplayer'
     # 'smplayer-skins'
     # 'smplayer-themes'
-    # 'smplayer'
     'yt-dlp'
 
     # MISCELLANEOUS
     'calibre'
     'libreoffice-still'
+    'virtualbox'
+    'wine'  # Enable multilib first
+    'wine-mono'
 
     # NETWORK
     # 'apache'
+    'freerdp'
+    'nmap'
+    'openvpn'
     'ufw'   # Replace with 'gufw' for GUI tool
 
     # SYSTEM
@@ -62,15 +73,23 @@ PKGS=(
     'aspell-en'
     'aspell-pt'
     'bash-completion'
+    'bash-language-server'
     # 'borg'
     'docker'
+    'dolphin-plugins'
     'filelight'
-    # 'filezilla'
+    'filezilla'
+    'ibus'
+    'inotify-tools'
     'kate'
     'kcalc'
     'kdialog'
     'neofetch'
     'p7zip'
+    'perl-rename'
+    'rclone'
+    'testdisk'    # Checks and undeletes partitions + PhotoRec, signature based recovery tool
+    'unrar'
     'unzip'
     'usbutils'
     'veracrypt'
