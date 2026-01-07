@@ -105,10 +105,8 @@ PKGS=(
     # SYSTEM — Plasma Desktop (Minimal but Complete)
     # =========================================================================
     plasma-desktop
-    plasma-framework
     plasma-pa
     plasma-nm
-    plasma-wayland-session
     powerdevil
     polkit-kde-agent
     systemsettings
@@ -143,7 +141,7 @@ PKGS=(
     egl-wayland
     libdecor
     xdg-desktop-portal-kde
-    xorg-wayland
+    xorg-xwayland
 
     # =========================================================================
     # UTILITIES — KDE Applications
@@ -168,10 +166,10 @@ PKGS=(
     btrfs-progs
     e2fsprogs
     exfatprogs
+    fastfetch
     ntfs-3g
     lsof
     ncdu
-    neofetch
     perl-rename
     pkgfile
     ranger
