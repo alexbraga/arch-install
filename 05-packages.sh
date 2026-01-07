@@ -1,127 +1,257 @@
 #!/bin/bash
 
 PKGS=(
-    # DEVELOPMENT
-    'dbeaver'
-    'gradle'
-    'jdk11-openjdk'
-    'jdk17-openjdk'
-    'mariadb'
-    'maven'
-    'nodejs-lts-gallium'  # Replace LTS release name if outdated
-    'npm'
-    # 'nvm'
-    'postgresql'
+    # =========================================================================
+    # DEVELOPMENT — Toolchains & Runtimes
+    # =========================================================================
+    bash-language-server
+    git-filter-repo
+    github-cli
+    jdk-openjdk
+    npm
+    nvm
+    yaml-language-server
+    docker
+    python-pipx
+    python-pystray
 
-    # GRAPHICS
-    'gwenview'
-    'inkscape'
-    'kimageformats'   # Image format plugins for Qt5
-    'okular'
-    'qt5-imageformats'    # Plugins for additional image formats: TIFF, MNG, TGA, WBMP
-    'spectacle'
+    # =========================================================================
+    # DEVELOPMENT — Build Tools
+    # =========================================================================
+    gradle
+    maven
 
-    # INTERNET
-    'discord'
-    'firefox'
-    'qbittorrent'
-    'telegram-desktop'
+    # =========================================================================
+    # FONTS
+    # =========================================================================
+    noto-fonts-cjk
+    noto-fonts-emoji
+    otf-monaspace
+    ttf-jetbrains-mono
+    ttf-mona-sans
+    ttf-monaspace-variable
 
-    # MEDIA
-    'alsa-plugins'
-    'alsa-utils'
-    # 'audacious'
-    # 'elisa'
-    # 'kdenlive'
-    # 'kodi'
-    # 'mpd'
-    'mpv'
-    # 'ncmpcpp'
-    # 'obs-studio'
-    'pavucontrol'
-    'pipewire-pulse'
-    'pulseaudio-alsa'
-    # 'smplayer'
-    # 'smplayer-skins'
-    # 'smplayer-themes'
-    'yt-dlp'
+    # =========================================================================
+    # GRAPHICS & DOCUMENTS
+    # =========================================================================
+    gwenview
+    inkscape
+    okular
+    spectacle
+    displaycal
+    calibre
+    aegisub
 
-    # MISCELLANEOUS
-    'calibre'
-    'libreoffice-still'
-    'virtualbox'
-    'wine'  # Enable multilib first
-    'wine-mono'
+    # =========================================================================
+    # INTERNET & COMMUNICATION
+    # =========================================================================
+    discord
+    firefox
+    telegram-desktop
+    tor
+    torbrowser-launcher
+    filezilla
 
-    # NETWORK
-    # 'apache'
-    'freerdp'
-    'nmap'
-    'openvpn'
-    'ufw'   # Replace with 'gufw' for GUI tool
+    # =========================================================================
+    # MEDIA — Applications
+    # =========================================================================
+    audacious
+    ffmpeg
+    jellyfin-mpv-shim
+    kdenlive
+    mpv
+    obs-studio
+    picard
+    yt-dlp
 
-    # SYSTEM
-    'gnome-keyring'
-    'gparted'
-    'kcron'
-    'ksystemlog'
+    # =========================================================================
+    # MEDIA — Audio Stack
+    # =========================================================================
+    alsa-utils
+    pipewire-audio
+    pipewire-jack
 
-    # UTILITIES
-    # 'android-tools'
-    'ark'
-    'aspell'
-    'aspell-en'
-    'aspell-pt'
-    'bash-completion'
-    'bash-language-server'
-    # 'borg'
-    'docker'
-    'dolphin-plugins'
-    'filelight'
-    'filezilla'
-    'ibus'
-    'inotify-tools'
-    'kate'
-    'kcalc'
-    'kdialog'
-    'neofetch'
-    'p7zip'
-    'perl-rename'
-    'rclone'
-    'testdisk'    # Checks and undeletes partitions + PhotoRec, signature based recovery tool
-    'unrar'
-    'unzip'
-    'usbutils'
-    'veracrypt'
+    # =========================================================================
+    # GAMING & EMULATION
+    # =========================================================================
+    gamemode
+    libretro
+    mangohud
+    retroarch
+    retroarch-assets-ozone
+    retroarch-assets-xmb
+    steam
+
+    # =========================================================================
+    # VIRTUALIZATION & COMPATIBILITY
+    # =========================================================================
+    virtualbox
+    wine
+    wine-gecko
+    wine-mono
+
+    # =========================================================================
+    # NETWORKING & SECURITY
+    # =========================================================================
+    inetutils
+    networkmanager-openvpn
+    nmap
+    openssh
+    ufw
+    gnome-keyring
+    veracrypt
+
+    # =========================================================================
+    # SYSTEM — Plasma Desktop (Minimal but Complete)
+    # =========================================================================
+    plasma-desktop
+    plasma-framework
+    plasma-pa
+    plasma-nm
+    plasma-wayland-session
+    powerdevil
+    polkit-kde-agent
+    systemsettings
+    kglobalaccel
+    kactivitymanagerd
+    kscreen
+    kwin
+
+    # =========================================================================
+    # SYSTEM — Display Manager
+    # =========================================================================
+    sddm
+    sddm-kcm
+
+    # =========================================================================
+    # SYSTEM — Hardware, Graphics & Drivers
+    # =========================================================================
+    bluedevil
+    bluez-utils
+    bluez-deprecated-tools
+    lib32-mesa
+    lib32-vulkan-icd-loader
+    lib32-vulkan-radeon
+    mesa
+    vulkan-icd-loader
+    vulkan-radeon
+    openrgb
+
+    # =========================================================================
+    # SYSTEM — Wayland & Desktop Integration
+    # =========================================================================
+    egl-wayland
+    libdecor
+    xdg-desktop-portal-kde
+    xorg-wayland
+
+    # =========================================================================
+    # UTILITIES — KDE Applications
+    # =========================================================================
+    ark
+    dolphin
+    dolphin-plugins
+    filelight
+    kate
+    kcalc
+    kcron
+    kdialog
+    kinfocenter
+    konsole
+    ksystemlog
+
+    # =========================================================================
+    # UTILITIES — CLI, Filesystems & Backup
+    # =========================================================================
+    7zip
+    bash-completion
+    btrfs-progs
+    e2fsprogs
+    exfatprogs
+    ntfs-3g
+    lsof
+    ncdu
+    neofetch
+    perl-rename
+    pkgfile
+    ranger
+    rclone
+    rsync
+    tree
+    unzip
+    usbutils
+    zip
+
+    # =========================================================================
+    # DOCUMENT PREPARATION — TeX / LaTeX
+    # =========================================================================
+    texlive-latex
+    texlive-latexextra
+    texlive-latexrecommended
+    texlive-fontsextra
+    texlive-fontsrecommended
+    texlive-pictures
+    texlive-xetex
+
+    # =========================================================================
+    # UTILITIES — System & Admin
+    # =========================================================================
+    cronie
+    gparted
+    htop
+    inotify-tools
+    time
+    testdisk
+    wl-clipboard
 )
 
-for PKG in "${PKGS[@]}"; do
-    echo -e "\nINSTALLING: ${PKG}"
-    sudo pacman -S "$PKG" --needed --noconfirm
-    echo -e "\n...DONE"
-done
+dir="${HOME}/tmp"
 
-# Enable firewall
+set -e
+
+# Download pacman.conf and replace original file
+sudo curl --create-dirs --output-dir $dir -O https://gist.githubusercontent.com/alexbraga/f1ddde773f86ac643b5a5149c18c7e5a/raw/29e97a5cc59ee342c717697bf075b11358e41cf9/pacman.conf
+sudo mv /etc/pacman.conf /etc/pacman.conf.bak
+sudo cp ${dir}/pacman.conf /etc/pacman.conf
+
+# Upgrade the system and install packages
+sudo pacman -Syu ${PKGS[@]} --needed
+
+# ============================================================================
+# Enable system services
+# ============================================================================
+
+# BLUETOOTH
+echo -e "Enabling bluetooth.service..."
+sudo systemctl enable --now bluetooth.service
+echo -e "...DONE\n"
+
+# CRON
+echo -e "Enabling cronie.service..."
+sudo systemctl enable --now cronie.service
+echo -e "...DONE\n"
+
+# DOCKER
+echo -e "Enabling docker.service..."
+sudo systemctl enable --now docker.service
+echo -e "...DONE\n"
+
+# PKGFILE DB UPDATES
+echo -e "Enabling pkgfile-update.timer..."
+sudo systemctl enable --now pkgfile-update.timer
+echo -e "...DONE\n"
+
+# SDDM
+echo -e "Enabling sddm.service..."
+sudo systemctl enable sddm.service
+echo -e "...DONE\n"
+
+# UFW
 echo -e "\nEnabling ufw.service..."
-sudo systemctl enable ufw.service
-echo -e "\n...DONE\n"
+sudo systemctl enable --now ufw.service
+echo -e "...DONE\n"
 
-# Enable Cron
-echo -e "\nEnabling cronie.service..."
-sudo systemctl enable cronie.service
-echo -e "\n...DONE\n"
+# Remove tmp folder
+sudo rm -r $dir
 
-# Enable Docker
-echo -e "\nEnabling docker.service..."
-sudo systemctl enable docker.service
-echo -e "\nStarting docker.service..."
-sudo systemctl start docker.service
-echo -e "\n...DONE\n"
-
-# Install Portainer
-echo -e "\nInstalling Portainer: Container Management..."
-echo -e "\nCreating Docker volume..."
-sudo docker volume create portainer_data
-echo -e "\nDownloading and installing the Portainer Server container..."
-sudo docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
-echo -e "\n...DONE\n"
+echo -e "\nFinished successfully!"
