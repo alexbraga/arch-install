@@ -5,15 +5,21 @@ PKGS=(
     # DEVELOPMENT — Toolchains & Runtimes
     # =========================================================================
     bash-language-server
+    docker
+    docker-compose
     git-filter-repo
     github-cli
     jdk-openjdk
     npm
     nvm
-    yaml-language-server
-    docker
     python-pipx
     python-pystray
+    yaml-language-server
+
+    # =========================================================================
+    # DEVELOPMENT — Applications
+    # =========================================================================
+    dbeaver
 
     # =========================================================================
     # DEVELOPMENT — Build Tools
@@ -34,23 +40,23 @@ PKGS=(
     # =========================================================================
     # GRAPHICS & DOCUMENTS
     # =========================================================================
+    aegisub
+    calibre
+    displaycal
     gwenview
     inkscape
     okular
     spectacle
-    displaycal
-    calibre
-    aegisub
 
     # =========================================================================
     # INTERNET & COMMUNICATION
     # =========================================================================
     discord
+    filezilla
     firefox
     telegram-desktop
     tor
     torbrowser-launcher
-    filezilla
 
     # =========================================================================
     # MEDIA — Applications
@@ -93,27 +99,28 @@ PKGS=(
     # =========================================================================
     # NETWORKING & SECURITY
     # =========================================================================
+    gnome-keyring
     inetutils
     networkmanager-openvpn
     nmap
     openssh
+    proton-vpn-gtk-app 
     ufw
-    gnome-keyring
     veracrypt
 
     # =========================================================================
     # SYSTEM — Plasma Desktop (Minimal but Complete)
     # =========================================================================
+    kactivitymanagerd
+    kglobalaccel
+    kscreen
+    kwin
     plasma-desktop
     plasma-pa
     plasma-nm
     powerdevil
     polkit-kde-agent
     systemsettings
-    kglobalaccel
-    kactivitymanagerd
-    kscreen
-    kwin
 
     # =========================================================================
     # SYSTEM — Display Manager
@@ -125,15 +132,15 @@ PKGS=(
     # SYSTEM — Hardware, Graphics & Drivers
     # =========================================================================
     bluedevil
-    bluez-utils
     bluez-deprecated-tools
+    bluez-utils
     lib32-mesa
     lib32-vulkan-icd-loader
     lib32-vulkan-radeon
     mesa
+    openrgb
     vulkan-icd-loader
     vulkan-radeon
-    openrgb
 
     # =========================================================================
     # SYSTEM — Wayland & Desktop Integration
@@ -167,9 +174,10 @@ PKGS=(
     e2fsprogs
     exfatprogs
     fastfetch
-    ntfs-3g
+    grub-btrfs
     lsof
     ncdu
+    ntfs-3g
     perl-rename
     pkgfile
     ranger
@@ -183,11 +191,11 @@ PKGS=(
     # =========================================================================
     # DOCUMENT PREPARATION — TeX / LaTeX
     # =========================================================================
+    texlive-fontsextra
+    texlive-fontsrecommended
     texlive-latex
     texlive-latexextra
     texlive-latexrecommended
-    texlive-fontsextra
-    texlive-fontsrecommended
     texlive-pictures
     texlive-xetex
 
@@ -198,6 +206,7 @@ PKGS=(
     gparted
     htop
     inotify-tools
+    kio-admin
     time
     testdisk
     wl-clipboard
