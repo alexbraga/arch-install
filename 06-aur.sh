@@ -24,69 +24,94 @@ fi
 echo -e "\nPreparing to install AUR packages...\n"
 
 PKGS=(
+    # =========================================================================
     # DEVELOPMENT
-    'intellij-ideia-ultimate-edition'
-    'mongodb-bin'
-    'postman-bin'
-    'robo3t-bin'
-    'visual-studio-code-bin'
+    # =========================================================================
+    jetbrains-toolbox
+    postman-bin
+    studio-3t
+    # visual-studio-code-bin
 
-    # INTERNET
-    'dropbox'
-    'flaresolverr'
-    'google-chrome'
-    # 'jackett-bin'
-    'prowlarr'
-    'sonarr'
+    # =========================================================================
+    # CLOUD & DATABASE TOOLS
+    # =========================================================================
+    google-cloud-cli
+    turso-cli-bin
 
-    # MISCELLANEOUS
-    'anki-bin'
-    'logseq-desktop-bin'
-    # 'mendeleydesktop-bundled'
-    'packettracer'
+    # =========================================================================
+    # INTERNET & COMMUNICATION
+    # =========================================================================
+    dropbox
+    google-chrome
+    zoom
 
+    # =========================================================================
     # MEDIA
-    # 'spotify'
-    'ums'
+    # =========================================================================
+    spotify
+    spotx-git
+    subtitleedit
+    yacreader-bin
 
-    # NETWORK
-    'protonvpn'
-    'tor-browser-bin'
-    # 'windscribe-cli'
+    # =========================================================================
+    # DOCUMENTS & PUBLISHING
+    # =========================================================================
+    libpdfium-nojs
+    pandoc-bin
 
+    # =========================================================================
+    # KNOWLEDGE & STUDY
+    # =========================================================================
+    logseq-desktop-bin
+    # anki-bin
+    # mendeleydesktop-bundled
+
+    # =========================================================================
+    # NETWORKING
+    # =========================================================================
+    # packettracer
+    # windscribe-cli
+
+    # =========================================================================
+    # SYSTEM & BOOT
+    # =========================================================================
+    etcher-bin
+    ventoy-bin
+
+    # =========================================================================
+    # SYSTEM MAINTENANCE
+    # =========================================================================
+    grub-hook
+    informant
+    paccache-hook
+
+    # =========================================================================
+    # EMULATION & GAMING
+    # =========================================================================
+    libretro-atari800-git
+    libretro-prosystem-git
+
+    # =========================================================================
     # UTILITIES
-    'etcher-bin'
-    'freedowloadmanager'
-    'grub-hook'
-    'paccache-hook'
-    'portainer-bin'
-    # 'vorta'
+    # =========================================================================
+    freedownloadmanager-bin
+    rar
+    # vorta
+
+    # =========================================================================
+    # FONTS
+    # =========================================================================
+    ttf-times-new-roman
 )
 
-for PKG in "${PKGS[@]}"; do
-    echo -e "\nINSTALLING: ${PKG}"
-    yay -S "$PKG" --needed
-    echo -e "\n...DONE"
-done
+# Upgrade the system and install AUR packages
+yay -S ${PKGS[@]} --needed
 
-# Install FreeFileSync
-echo -e "\nINSTALLING: freefilesync-bin"
-git clone https://aur.archlinux.org/freefilesync-bin.git
-cd freefilesync-bin
-makepkg -sic
-echo -e "\n...DONE"
+# ============================================================================
+# Enable user services
+# ============================================================================
 
-# Enable MongoDB
-echo -e "\nEnabling mongodb.service..."
-sudo systemctl enable mongodb.service
-echo -e "\n...DONE\n"
-
-# Enable Prowlarr
-echo -e "\nEnabling prowlarr.service..."
-sudo systemctl enable prowlarr.service
-echo -e "\n...DONE\n"
-
-# Enable Sonarr
-echo -e "\nEnabling sonarr.service..."
-sudo systemctl enable sonarr.service
-echo -e "\n...DONE\n"
+# VORTA
+# echo -e "Enabling vorta.service..."
+# systemctl --user enable --now vorta.service
+# echo -e "...DONE\n"
