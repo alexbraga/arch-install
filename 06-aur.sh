@@ -88,6 +88,7 @@ PKGS=(
     # =========================================================================
     # EMULATION & GAMING
     # =========================================================================
+    heroic-games-launcher-bin
     libretro-atari800-git
     libretro-prosystem-git
 
