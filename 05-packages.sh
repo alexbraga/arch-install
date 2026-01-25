@@ -2,14 +2,17 @@
 
 PKGS=(
     # =========================================================================
-    # DEVELOPMENT — Toolchains & Runtimes
+    # DEVELOPMENT
     # =========================================================================
     bash-language-server
+    dbeaver
     docker
     docker-compose
     git-filter-repo
     github-cli
+    gradle
     jdk-openjdk
+    maven
     npm
     nvm
     python-pipx
@@ -17,15 +20,39 @@ PKGS=(
     yaml-language-server
 
     # =========================================================================
-    # DEVELOPMENT — Applications
+    # DESKTOP & PLASMA (Core, Session & Input)
     # =========================================================================
-    dbeaver
+    ibus
+    kactivitymanagerd
+    kglobalaccel
+    kscreen
+    kwin
+    plasma-desktop
+    plasma-nm
+    plasma-pa
+    powerdevil
+    polkit-kde-agent
+    systemsettings
 
     # =========================================================================
-    # DEVELOPMENT — Build Tools
+    # DISPLAY & GRAPHICS STACK
     # =========================================================================
-    gradle
-    maven
+    egl-wayland
+    lib32-mesa
+    lib32-vulkan-icd-loader
+    lib32-vulkan-radeon
+    libdecor
+    mesa
+    vulkan-icd-loader
+    vulkan-radeon
+    xdg-desktop-portal-kde
+    xorg-xwayland
+
+    # =========================================================================
+    # DISPLAY MANAGER
+    # =========================================================================
+    sddm
+    sddm-kcm
 
     # =========================================================================
     # FONTS
@@ -38,7 +65,7 @@ PKGS=(
     ttf-monaspace-variable
 
     # =========================================================================
-    # GRAPHICS & DOCUMENTS
+    # GRAPHICS, DOCUMENTS & PUBLISHING
     # =========================================================================
     aegisub
     calibre
@@ -47,6 +74,14 @@ PKGS=(
     inkscape
     okular
     spectacle
+
+    # =========================================================================
+    # HARDWARE, BLUETOOTH & RGB
+    # =========================================================================
+    bluedevil
+    bluez-deprecated-tools
+    bluez-utils
+    openrgb
 
     # =========================================================================
     # INTERNET & COMMUNICATION
@@ -59,8 +94,9 @@ PKGS=(
     torbrowser-launcher
 
     # =========================================================================
-    # MEDIA — Applications
+    # MEDIA & AUDIO
     # =========================================================================
+    alsa-utils
     audacious
     ffmpeg
     jellyfin-mpv-shim
@@ -68,14 +104,9 @@ PKGS=(
     mpv
     obs-studio
     picard
-    yt-dlp
-
-    # =========================================================================
-    # MEDIA — Audio Stack
-    # =========================================================================
-    alsa-utils
     pipewire-audio
     pipewire-jack
+    yt-dlp
 
     # =========================================================================
     # GAMING & EMULATION
@@ -104,54 +135,12 @@ PKGS=(
     networkmanager-openvpn
     nmap
     openssh
-    proton-vpn-gtk-app 
+    proton-vpn-gtk-app
     ufw
     veracrypt
 
     # =========================================================================
-    # SYSTEM — Plasma Desktop (Minimal but Complete)
-    # =========================================================================
-    kactivitymanagerd
-    kglobalaccel
-    kscreen
-    kwin
-    plasma-desktop
-    plasma-pa
-    plasma-nm
-    powerdevil
-    polkit-kde-agent
-    systemsettings
-
-    # =========================================================================
-    # SYSTEM — Display Manager
-    # =========================================================================
-    sddm
-    sddm-kcm
-
-    # =========================================================================
-    # SYSTEM — Hardware, Graphics & Drivers
-    # =========================================================================
-    bluedevil
-    bluez-deprecated-tools
-    bluez-utils
-    lib32-mesa
-    lib32-vulkan-icd-loader
-    lib32-vulkan-radeon
-    mesa
-    openrgb
-    vulkan-icd-loader
-    vulkan-radeon
-
-    # =========================================================================
-    # SYSTEM — Wayland & Desktop Integration
-    # =========================================================================
-    egl-wayland
-    libdecor
-    xdg-desktop-portal-kde
-    xorg-xwayland
-
-    # =========================================================================
-    # UTILITIES — KDE Applications
+    # KDE UTILITIES & FILE MANAGEMENT
     # =========================================================================
     ark
     dolphin
@@ -164,9 +153,10 @@ PKGS=(
     kinfocenter
     konsole
     ksystemlog
+    kio-admin
 
     # =========================================================================
-    # UTILITIES — CLI, Filesystems & Backup
+    # CLI UTILITIES, FILESYSTEMS & BACKUP
     # =========================================================================
     7zip
     bash-completion
@@ -200,13 +190,13 @@ PKGS=(
     texlive-xetex
 
     # =========================================================================
-    # UTILITIES — System & Admin
+    # SYSTEM
     # =========================================================================
     cronie
     gparted
     htop
     inotify-tools
-    kio-admin
+    power-profiles-daemon
     time
     testdisk
     wl-clipboard
@@ -246,6 +236,11 @@ echo -e "...DONE\n"
 # PKGFILE DB UPDATES
 echo -e "Enabling pkgfile-update.timer..."
 sudo systemctl enable --now pkgfile-update.timer
+echo -e "...DONE\n"
+
+# POWER PROFILES DAEMON
+echo -e "Enabling power-profiles-daemon.service..."
+sudo systemctl enable --now power-profiles-daemon.service
 echo -e "...DONE\n"
 
 # SDDM
