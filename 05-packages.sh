@@ -215,6 +215,16 @@ sudo cp ${dir}/pacman.conf /etc/pacman.conf
 sudo pacman -Syu ${PKGS[@]} --needed
 
 # ============================================================================
+# Set environment variables for ibus
+# ============================================================================
+
+sudo cat <<EOF >> /etc/environment
+GTK_IM_MODULE=ibus
+QT_IM_MODULE=ibus
+XMODIFIERS=@im=ibus
+EOF
+
+# ============================================================================
 # Enable system services
 # ============================================================================
 
